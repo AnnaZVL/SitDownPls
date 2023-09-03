@@ -1,0 +1,516 @@
+@import '_mixins.scss';
+@import '_variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Open Sans';	
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),		
+        url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+		url('/fonts/OpenSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';	
+	src: local('Open Sans Regular'), local('OpenSans-Regular'),		
+        url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+		url('/fonts/OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';	
+	src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),		
+        url('/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+		url('/fonts/OpenSans-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Playfair Display';	
+	src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'),		
+        url('/fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+		url('/fonts/PlayfairDisplay-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+    font-display: swap;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    @include fontOpen(16px, 130%, $colorGrey);
+    background-color: $colorWhite;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: $containerMaxwidth;
+    width: 100%;
+    @media (max-width: 1024px) {
+        max-width: 982px
+    }
+    @media (max-width: 768px) {
+        max-width: 662px
+    }
+    @media (max-width: 380px) {
+        max-width: 320px;
+        padding: 0 12px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    gap: 32px;
+    @media (max-width: 630px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+.card {
+    padding: 53px 30px 32px 23px;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: $colorGreyLight;
+    border-radius: 10px;
+    height: 100%;
+    min-height: 420px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    @media (max-width: 630px) {
+        padding: 53px 16px 16px 16px;
+        min-height: 280px;
+    }
+    &-big {        
+        & .card__link {
+            padding: 0;
+            width: 100%;
+        }           
+    }  
+    &__link {       
+        padding: 20px 20px 0 20px;
+        margin-bottom: 16px;
+        display: inline-block;
+        position: relative;
+        justify-self: center;
+        width: 80%;
+        height: 230px;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+        @media (max-width: 630px) {
+            width: 80%;
+        }
+
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 24px;
+        height: 100%;
+    }
+    &__title {        
+        @include cardTitle; 
+        margin-bottom: 0; 
+        display: flex;
+        flex-direction: column; 
+
+    }
+    &__info-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__price-box {
+        margin-bottom: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 26px;
+    }
+    &__price-sale {
+        @include fontOpen(18px, 130%, $colorSecondary);
+    }
+    &__price {
+        @include fontOpen(16px, 130%, $colorGrey);
+        text-decoration: line-through;
+        &-total {
+            margin-bottom: 21px;
+            text-decoration: none;
+            @media (max-width: 630px) {
+               margin-bottom: 16px;
+            }
+        }
+    }
+    &__btn {
+        @include btnResert;
+        @include btnTransparent;
+        @media (max-width: 630px) {
+            padding: 19px 25px;
+        }
+        @media (max-width: 568px) {
+            padding: 15px 20px;
+        }
+    }
+    &__sale {  
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        background-color: transparent;        
+        @include fontOpen(14px, 100%, $colorWhite);
+        font-weight: bold;        
+        &-text {             
+            display: inline-block; 
+            padding: 10px 20px; 
+            text-align: center; 
+            background-color: $colorSecondary;           
+        }
+        &-arrow {
+            width: 0;
+            height: 0;                        
+            border-top: 17px solid $colorGreyLight;
+            border-left: 12px solid $colorSecondary;
+            border-bottom: 17px solid $colorGreyLight;
+        }
+    }
+    &__star {
+        margin: 0;
+        position: absolute;
+        top: 33px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2px;
+        @include fontOpen(16px, 130%, $colorSecondary);
+        @media (max-width: 630px) {
+            top: 15px;
+            left: 17px;
+            font-size: 12px;
+        }
+        &-icon {
+            width: 22px;
+            height: 15px;
+            @media (max-width: 630px) {
+                width: 18px;
+                height: 15px;
+            }
+        }
+    }
+    &__drawing {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        @media (max-width: 1400px) {
+            display: none;
+        }
+    }
+}
+
+.card.hidden {
+    display: none;
+}
+
+.breadcrumbs {
+    margin-bottom: 32px;
+    @media (max-width: 1024px) {
+        margin-bottom: 0;
+    }
+    @media (max-width:380px) {
+       display: none;
+    }
+    &__container {
+        padding: 0 7px;
+    }
+    &__list {
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+    }
+    &__item {
+        @include linkMenu;
+    }
+    &__link {        
+        @include fontOpen(14px, 100%, $colorGrey);
+    }
+    &__text {
+        display: inline-block;
+        @include fontOpen(14px, 100%, $colorPrimaryShade);
+    }
+}
+
+.form {
+    margin-bottom: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;  
+    @media (max-width: 1024px)  {
+        margin-bottom: 6px;
+    } 
+    &__input {
+        padding: 7px 18px;        
+        border: none;
+        border-radius: 10px;
+        background-color: $colorGreyLight;
+        width: 100%;
+        outline: none;
+        @include fontOpen(16px, 40px, $colorBlack);
+        @include inputAction;
+    }
+    &__input.error {
+        outline: 1px solid #FF6972;
+    }
+    &__input::placeholder {
+        @include fontOpen(16px, 40px, $colorGrey);
+    }
+    &__wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .just-validate-error-label {
+        position: absolute;
+        top: -18px;
+        left: 18px;
+        @include fontOpen(12px, 100%, #FF6972);
+    }
+    &__btn {
+        @include btnResert;
+        @include btnPrimary;
+        padding: 19px 35px;
+    }
+}
+
+.modal {     
+    /*position: absolute;
+    inset: 0;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba($colorBlack, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    &__wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    &__body {
+        margin: 0 auto;        
+        padding: 30px;
+        position: relative;
+        width: 625px;
+        border-radius: 10px;
+        background-color: $colorWhite;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+        @media (max-width: 630px) {
+            padding: 60px 16px 30px 16px;
+        }
+    }
+    &__content {        
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 6px;
+        @include sectionTitle;
+        text-align: left;
+    }
+    &__text {
+        margin-bottom: 16px;
+        @include fontOpen(14px, 100%, $colorBlack);
+        text-align: left
+    }
+    &__btn-exit {
+        @include btnResert;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    &__btn-icon {
+        width: 20px;
+        height: 20px;
+    }
+    &__img {
+        margin-top: 30px;
+        margin-bottom: 32px;
+        width: 170px;
+        height: 115px;
+        @media (max-width: 630px) {
+            margin-bottom: 15px;
+            width: 75px;
+            height: 50px;
+        }
+    }
+    &__call {
+        margin-bottom: 90px;
+        display: block;
+        @include fontOpen(32px, 100%, $colorBlack);
+        @media (max-width: 630px) {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            font-size: 16px;
+            width: 60%;
+        }
+    }
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;   
+}
+
+.disable-scroll {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.modal.open .modal__body {
+    transform: translateY(0);
+}
+
+.tippy-tooltip {
+    position: relative;
+    border-radius: 0px;
+    width: 150px;
+    text-align: center;
+    transition-property: visibility,opacity,transform;
+    outline: 0;
+    @include fontOpen(9px, 14px, $colorWhite);
+}
+
+.tippy-tooltip[data-placement^='bottom'] .tippy-arrow {
+border-bottom-color: $colorBlack;
+}
+
+.checkbox {
+    padding-left: 20px;
+    &__label {
+        position: relative;
+    }
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0)
+    }
+    &__box {
+        position: absolute;
+        margin-top: 3px;
+        margin-left: -20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 0.05em;
+        background-color: transparent;
+        border: 1px solid $colorGrey;
+    }
+    &__input:checked + .checkbox__box {
+        background-image: url('/images/cheked_on.svg');
+        background-position: 0 0;
+        background-size: cover;
+        border: none; 
+    }
+    &__input:focus + .checkbox__box {
+        border: 2px solid $colorPrimary;
+    }
+    &__input:checked:focus + .checkbox__box {
+        border: none;
+    }
+    &__input:disabled + .checkbox__box {
+        background-color: rgba($colorBlack, 0.3);
+    }
+    &__input:checked:disabled + .checkbox__box {
+        opacity: 0.5;
+    }
+    &__text {
+        @include fontOpen(14px, 100%, $colorGreyShade);
+        @media (max-width: 630px) {
+            font-size: 12px;
+        }
+    }
+    &__link {
+        margin-left: 2px;
+        @include fontOpen(14px, 100%, $colorGreyShade);
+        text-decoration: underline;
+        color: $colorPrimary;
+        @media (max-width: 630px) {
+            font-size: 12px;
+        }
+    }
+}

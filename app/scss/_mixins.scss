@@ -1,0 +1,183 @@
+@import '_variables.scss';
+
+@mixin fontOpen($fz, $lh, $color){
+    font-family: 'Open Sans';
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: normal;
+    color: $color;
+}
+
+@mixin btnResert() {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    @include fontOpen(16px, 100%, $colorWhite);
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin btnPrimary() {
+    padding: 22px 47px;
+    background-color: $colorPrimary;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, outline 0.3s ease-in-out;   
+    font-weight: bold;
+    &:focus-visible {
+        background-color: $colorPrimaryLight;
+        outline: 2px solid $colorPrimaryShade;
+    }
+    &:hover {
+        background-color: $colorPrimaryLight;
+    }
+    &:active {
+        background-color: $colorPrimaryShade;
+    }
+}
+
+@mixin btnTransparent() {
+    padding: 19px 35px;
+    background-color: transparent;
+    border: 2px solid $colorPrimary;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;   
+    font-weight: 600;
+    color: $colorPrimary;
+    &:focus-visible {
+        background-color: $colorPrimaryLight;
+        color: $colorWhite;
+    }
+    &:hover {
+        background-color: $colorPrimary;   
+        color: $colorWhite;    
+    }
+    &:active {
+        background-color: $colorPrimaryShade;
+        border: 2px solid $colorPrimaryShade;
+        color: $colorWhite;
+    }
+}
+
+@mixin linkMenu() {    
+    transition: color 0.3s ease-in-out;
+    display: block; 
+    & > a {   
+        padding: 1px 6px; 
+        transition: background 0.3s ease-in-out;  
+    }
+    & > a:focus-visible {
+        color: $colorPrimaryShade; 
+        background-color: $colorPinkViolet;       
+    }
+    & > a:hover {
+        color: $colorPrimary;       
+    }
+    & > a:active {
+        color: $colorPrimaryShade;
+    }
+}
+
+@mixin iconLink($colorFocus, $colorHover, $colorActive, $colorBg) {
+    transition: color 0.3s ease-in-out;
+    .icon path {
+        transition: fill 0.3s ease-in-out;
+    }
+    &:focus-visible {
+        background-color: $colorBg;
+        .icon path{
+            fill: $colorFocus;
+        }
+    }
+    &:hover {
+        color: $colorHover;
+        .icon path {
+            fill: $colorHover;
+        }
+    }
+    &:active {
+        color: $colorActive;
+        .icon  path {
+            fill: $colorActive;
+        }
+    }     
+}
+
+@mixin arrowBtn() { 
+    .icon path {        
+        transition: stroke 0.3s ease-in-out;      
+    }     
+    .icon circle {        
+        transition: fill 0.3s ease-in-out;      
+    }  
+    &:disabled { 
+        pointer-events: none;
+        path {
+            stroke: $colorGrey;
+        }        
+        .icon circle {
+            stroke: $colorGrey;
+        }
+    }
+    &:hover .icon path {
+        stroke: $colorWhite;
+        } 
+    &:hover .icon circle { 
+        fill: $colorPrimaryLight; 
+        stroke: $colorPrimary;         
+    } 
+    &:hover .icon path {
+        stroke: $colorWhite;
+        } 
+    &:hover .icon circle { 
+        fill: $colorPrimary; 
+        stroke: $colorPrimary;         
+    } 
+    &:active .icon path {
+        stroke: $colorWhite;
+        } 
+    &:active .icon circle { 
+        fill: $colorPrimaryShade; 
+        stroke: $colorPrimaryShade;         
+    }       
+}
+
+@mixin section() {
+    margin-bottom: 65px;
+    @media (max-width: 1024px) {
+        margin-bottom: 70px;
+    }
+}
+
+@mixin sectionTitle() {
+    margin-bottom: 26px;
+    @include fontOpen(32px, 100%, $colorBlack);
+    @media (max-width: 630px) {
+       font-size: 24px;
+    }
+}
+
+@mixin cardTitle() {
+    margin-bottom: 15px;
+    text-align: left;
+    @include fontOpen(24px, 130%, $colorBlack);
+    @media (max-width: 568px) {
+        font-size: 16px;
+    }
+}
+
+@mixin inputAction() {
+    transition: background 0.3s ease-in-out, outline 0.3s ease-in-out; 
+    &:focus-visible {
+        background-color: $colorPinkLight;
+        outline: 1px solid $colorPrimary;
+    }
+    &:hover {
+        background-color: $colorGreyMd;        
+    }
+    &:active {
+        outline: 1px solid #B8EC64;
+    }
+
+}

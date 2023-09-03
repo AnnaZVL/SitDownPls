@@ -1,0 +1,368 @@
+.details {
+    @include section;
+    margin-bottom: 80px;
+    @media (max-width: 768px) {
+        margin-bottom: 28px;
+    }
+    @media (max-width: 380px) {
+        margin-bottom: 6px;
+    }
+    &__top {
+        margin-bottom: 27px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        @media (max-width: 1220px) {
+            margin-top: 27px;
+            margin-bottom: 40px;
+            grid-template-columns: auto 42%;
+        }
+        @media (max-width: 1024px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 67px;
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: 630px) {
+            margin-bottom: 32px;
+        }
+        @media (max-width: 380px) {
+            margin-bottom: 7px;
+        }
+    }
+    &__left {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        position: relative
+    }    
+    &__left-top {
+        @include btnResert;
+    }
+    &__left-bottom {
+        padding: 10px 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 38px;
+        background-color: $colorGreyLight;
+        @media (max-width: 768px) {
+            padding: 25px 32px;
+            position: absolute;
+            top: 280px;
+            left: 0;
+            grid-template-columns: 1fr;
+            width: 190px;
+            gap: 13px;
+        }
+        @media (max-width: 630px) {
+            padding: 10px;
+            position: static;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
+    }
+    &__img-box {
+        position: relative;
+        padding-bottom: 50%;        
+    }
+    &__img-box:nth-child(odd) {
+        @media (max-width: 630px) {
+            display: none;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__right {
+        padding-top: 37px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        @media (max-width: 768px) {
+            padding-left: 220px;
+            padding-top: 74px;
+        }
+        @media (max-width: 630px) {
+            padding-left: 0;
+        } 
+        @media (max-width: 380px) {
+            padding-top: 0;
+            align-items: stretch;
+        }
+    }
+    &__star {
+        top: 14px;
+        left: 0;
+        @media (max-width: 768px) {
+            left: 220px; 
+            top: 51px;
+        }
+        @media (max-width: 630px) {
+            left: 0;           
+        } 
+        @media (max-width: 380px) {
+            top: -20px;
+        }
+    }
+    &__title {
+        margin-bottom: 5px;
+        @include fontOpen(24px, 130%, $colorBlack);
+        @media (max-width: 630px) {
+            font-size: 16px;
+        }        
+    }
+    &__descr {
+        margin-bottom: 20px;
+        @include fontOpen(14px, 100%, $colorGrey);
+    }
+    &__price {
+        margin-bottom: 20px;
+        @include fontOpen(36px, 130%, $colorBlack);
+        @media (max-width: 630px) {
+            margin-bottom: 12px;
+            font-size: 24px;
+        } 
+    }
+    &__btn {
+        margin-bottom: 20px;
+        padding: 19px 35px;        
+        @include btnResert;
+        @include btnPrimary;
+    }
+    &__cart-btn {
+        @include btnResert;
+        padding: 15px;
+        @include fontOpen(16px, 130%, $colorPrimary);
+        justify-self: flex-start;
+        margin-left: 15px;
+    } 
+    &__text {
+        @include fontOpen(14px, 180%, $colorBlack);
+        width: 47%;
+        &-top {
+            margin-bottom: 20px;
+            @media (max-width: 1024px) {
+                margin-bottom: 12px;
+            }
+        }
+        @media (max-width: 1024px) {
+            width: 54%;
+        }
+        @media (max-width: 768px) {
+            width: 35%;
+        }
+        @media (max-width: 380px) {
+            height: 19px;
+            width: 100%;
+        }
+    }  
+    &__text:nth-child(odd) {
+        @media (max-width: 630px) {
+        font-size: 10px;
+        }
+    }
+    &__text:nth-child(even) {
+        @media (max-width: 380px) {
+            margin-bottom: 8px;
+        }            
+    }
+    &__list {
+        width: 100%;
+    }
+    &__item {
+        display: flex;
+        @media (max-width: 630px) {
+            flex-direction: column;            
+        } 
+    } 
+    &__text-dotter::after {
+        content: '';
+        border-bottom: 2px dotted #AAA;
+        flex:1;
+        margin: 0 10px;   
+        @media (max-width: 630px) {
+            display: none;
+        }  
+    }   
+    &__text-dotter {
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        width: 100%;
+    }
+}
+
+.details-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    @media (max-width: 1220px) {
+        grid-template-columns: auto 42%;
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    &__left {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: space-between;
+        width: 100%;
+        @media (max-width: 768px) {
+            gap: 32px;
+            width: 80%;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 8px;
+        @include fontOpen(16px, 100%, $colorBlack);
+        font-weight: 600;
+    }  
+    &__text {
+        @include fontOpen(14px, 180%, $colorBlack);
+    }  
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    &__skelet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+.similar {
+    @include section;
+    margin-bottom: 55px;
+    position: relative;
+    @media (max-width: 1024px) {
+        margin-bottom: 60px;
+    }
+    @media (max-width: 568px) {
+        margin-bottom: 110px;
+    }
+    &__title {
+        margin-bottom: 24px;
+        @include fontOpen(24px, 130%, $colorBlack);
+    }
+    &__card {
+        padding: 60px 17px 30px 17px;       
+        gap: 0;
+        @media (max-width: 568px) {
+            padding: 30px 8px 15px 8px;
+        }
+    }
+    &__card > .card__link {
+        margin-bottom: 7px;
+        width: 100%;
+        height: 125px;
+        @media (max-width: 630px) {
+            padding: 0;
+            height: 60px;
+        }
+        @media (max-width: 568px) {
+           width: 80%;
+        }
+    }
+    &__card > .card__info {
+        padding: 10px;
+        height: 100%;
+    }
+    .card__price {
+        @media (max-width: 568px) {
+            margin-bottom: 9px;
+        }        
+    }
+    .card__btn {
+        @media (max-width: 568px) {
+            padding: 9px 23px;
+        }        
+    }
+    &__swiper {
+        height: 100%;
+        min-height: 420px;
+        @media (max-width: 630px) {
+            min-height: 275px;
+        }
+    }
+    &__slide {
+        height: auto;
+    }
+    &__swiper-btns {
+        right: 0;
+        @media (max-width: 630px) { 
+            left: 44%;
+            bottom: -32px;
+        }
+    }
+}
+
+.modal-swiper {
+    &__swiper {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            height: 270px;
+        }
+        @media (max-width: 630px) {
+            height: 100px;
+        }
+    }
+    &__slide {
+        width: 100%;
+    }    
+    &__box {
+        position: relative;
+        padding-bottom: 50%;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: contain;
+    }    
+    &__thumbs {
+        padding: 20px 67px;
+        position: relative;
+        width: 100%;
+        height: 125px;
+        background-color: $colorGreyLight;
+        overflow: hidden;
+    }
+    &__body {
+        padding: 0;
+        max-width: 1280px;
+        width: 90%;
+    }
+    &__btn {
+        position: absolute;
+        top: 40%;
+    }
+    
+}
+.btn__prev {        
+    left: 16px;
+    transform: rotate(180deg);
+}
+
+.btn__next {
+    right: 16px;
+}
+.modal__content-top {
+    padding: 40px  50px;
+    @media (max-width: 768px) {
+        padding: 50px 20px 20px 20px;
+    }
+    @media (max-width: 630px) {
+        padding: 30px 16px 10px 16px;
+    }
+}

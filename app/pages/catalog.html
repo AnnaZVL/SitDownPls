@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SitDownPis</title>
+    <link rel="shortcut icon" href="/images/favikon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--=include header.html -->
+        <nav class="breadcrumbs">
+            <div class="container breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная &nbsp;</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Каталог &nbsp;</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Диваны &nbsp;</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__text">Прямые диваны</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class=" catalog">
+            <div class="catalog__container container">
+                <aside class="catalog__filters">
+                    <div class="filters">
+                        <h4 class="filters__title filters__title-desctop">Фильтровать по:</h4>
+                        <h4 class="filters__title filters__title-mobile">Фильтры</h4>
+                        <div class="filters__inner">
+                            <div class="filters__item filter" data-spoilers="1024, max">
+                                <div class="filter__item">
+                                    <button class="filter__title" data-spoiler>Категория
+                                    </button>
+                                    <div class="filter__body">
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_11">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_1" id="c_11" checked>
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Диваны</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_12">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_12" id="c_12">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Кресла</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_13">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_13" id="c_13">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Пуфы</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_14">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_14" id="c_14">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Кровати</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_15">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_15" id="c_15">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Тумбы</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_16">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_16" id="c_16">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Комоды</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_17">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_17" id="c_17">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Стулья</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_18">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_18" id="c_18">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Столы</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_19">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_19" id="c_19">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Аксессуары</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__item filter" data-spoilers="1024, max">
+                                <div class="filter__item">
+                                    <button class="filter__title" data-spoiler>Цена</button>
+                                    <div class="filter__body">
+                                        <div class="filter__inputs">
+                                            <div class="filter__inputs-inner">
+                                                <label class="filter__label" for="from">от
+                                                    <input class="filter__input price price__from" name="from" id="from"
+                                                        type="text">
+                                                </label>
+                                            </div>
+                                            <div class="filter__inputs-inner">
+                                                <label class="filter__label" for="to">до
+                                                    <input class="filter__input price price__to" name="to" id="to"
+                                                        type="text">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter__progressbar" id="slider">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__item filter" data-spoilers="1024, max">
+                                <div class="filter__item">
+                                    <button class="filter__title" data-spoiler>Скидка</button>
+                                    <div class="filter__body">
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_21">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_21" id="c_21">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Более 5 000</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_22">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_22" id="c_22">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Менее 5 000</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_23">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_23" id="c_23" checked>
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Не важно</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters__item filter" data-spoilers="1024, max">
+                                <div class="filter__item">
+                                    <button class="filter__title" data-spoiler>Цвет</button>
+                                    <div class="filter__body">
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_31">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_31" id="c_31">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Коричневый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_32">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_32" id="c_32">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Черный</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_33">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_33" id="c_33">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Бежевый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_34">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_34" id="c_34">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Серый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_35">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_35" id="c_35">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Белый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_36">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_36" id="c_36">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Синий</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_37">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_37" id="c_37" checked>
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Оранжевый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_38">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_38" id="c_38">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Желтый</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__checkbox checkbox">
+                                            <label class="filter__checkbox-label checkbox__label" for="c_39">
+                                                <input class="filter__checkbox-input checkbox__input" type="checkbox"
+                                                    name="c_39" id="c_39">
+                                                <span class="filter__checkbox-box  checkbox__box"></span>
+                                                <span class="filter__checkbox-text checkbox__text">Зеленый</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__new catalog-new">
+                        <div class="catalog-new__images">
+                            <img src="/images/oksford_mini.webp" alt="Изображение декора">
+                        </div>
+                        <div class="catalog-new__info">
+                            <h3 class="catalog-new__title">Оксфорд 1950</h3>
+                            <span class="catalog-new__text">Новая коллекция изысканных кресел
+                            </span>
+                            <a href="#" class="catalog-new__link">
+                                В каталог
+                                <svg class="catalog-new__link-icon" xmlns="http://www.w3.org/2000/svg" width="32"
+                                    height="32" viewBox="0 0 32 32" fill="none">
+                                    <g clip-path="url(#clip0_65377_715)">
+                                        <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_65377_715">
+                                            <rect width="32" height="32" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="catalog__inner">
+                    <h2 class="catalog__title">Каталог</h2>
+                    <div class="catalog__wrapper cards">
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">5,0</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_1.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван кожаный</span>
+                                    <span>“R-94”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">94 900 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,9</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_2.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван апартековый</span>
+                                    <span>“T-75”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">69 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,8</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_3.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван тканевый</span>
+                                    <span>“D-31”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">28 490 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,8</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_4.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван велюровый</span>
+                                    <span>“Y-68”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">22 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,8</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_5.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван из шинила</span>
+                                    <span>“W-95”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">22 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,8</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_6.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"> <span>Диван флоковый</span>
+                                    <span>“G-41”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">17 9900 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,8</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_7.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван шиниловый</span>
+                                    <span>“V-43”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">19 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,7</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_8.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван велюровый</span>
+                                    <span>“S-99”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">19 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,7</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_9.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван из кожзама</span>
+                                    <span>“F-85”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">26 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,6</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_10.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван флоковый</span>
+                                    <span>“H-64”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">25 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,6</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_11.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван флоковый</span>
+                                    <span>“H-58”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">23 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,6</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_12.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван из кожзама</span>
+                                    <span>“R-43”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">23 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,6</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_13.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван из шинила</span>
+                                    <span>“С-42”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">18 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,6</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_14.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    <span>Диван велюровый</span>
+                                    <span>“U-58”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">21 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,5</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_15.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван флоковый</span>
+                                    <span>“F-41”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">17 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,5</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_1.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван велюровый</span>
+                                    <span>“R-85”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">34 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,5</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_17.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван велюровый</span>
+                                    <span>“S-44”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">19 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__card card">
+                            <div class="card__star">
+                                <svg class="card__star-icon" width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.226 5.282l-4.717-.684L8.4.33a.597.597 0 00-1.066 0L5.225 4.598.51 5.282a.594.594 0 00-.33 1.013l3.413 3.321-.806 4.69a.592.592 0 00.862.625l4.22-2.214 4.218 2.214a.593.593 0 00.862-.625l-.806-4.69 3.413-3.321a.592.592 0 00-.33-1.013z"
+                                        fill="#FF862F" />
+                                </svg>
+                                <span class="card__star-text">4,5</span>
+                            </div>
+                            <a class="card__link" href="card.html" target="_blank">
+                                <img class="card__img" src="/images/card/sofa_18.webp" alt="Изображение товара">
+                            </a>
+                            <div class="card__info">
+                                <h3 class="card__title"><span>Диван из шинила</span>
+                                    <span>“С-80”</span>
+                                </h3>
+                                <div class="card__info-bottom">
+                                    <span class="card__price-total">20 990 руб</span>
+                                    <button class="card__btn">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="catalog__pagging">
+                        <button class="catalog__pagging-btn btn-prev active">1</button>
+                        <button class="catalog__pagging-btn btn-next">2</button>
+                        <button class="catalog__pagging-btn btn-end">3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=include footer.html -->
+    </div>
+    <script src="/libs/choices.js"></script>
+    <script src="/libs/nouislider.mjs"></script>
+    <script src="/libs/swiper-bundle.js"></script>
+    <script type="module" src="/js/catalog.js"></script>
+</body>
+
+</html>
